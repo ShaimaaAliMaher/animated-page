@@ -1,0 +1,110 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px 10%;
+    background-image: url(images/back-image.png);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 140px;
+}
+ul li{
+    display: inline-block;
+    margin: 10px 15px;
+    list-style: none;  
+}
+ul li a , .login-btn{
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+    position: relative;
+    padding: 10px; 
+    font-weight: 700;
+}
+nav ul li a::before{
+    content: '';
+    width: 100%;
+    height:0px;
+    background: #c527963b;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: -3px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+nav ul li a:hover:before{
+    height: 70px;
+    transition: 0.5s;
+}
+.login-btn{
+    margin-right: 9px;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(45deg ,#df4881 ,#c430d7);
+    padding: 14px 40px;
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius:0 ;
+    transition: 0.5s;
+}
+.content{
+    margin-top: 10px;
+    max-width: 500px;
+}
+.content h1{
+    font-size: 70px;
+    color: #222;
+}
+.content p{
+    color: #333;
+    margin: 10px 0px 30px;
+    animation-delay: 0.5s;
+}
+.content .btn{
+  padding: 15px 80px;
+  font-size: 16px;
+  animation-delay: 0.5s;
+}
+.btn:hover{
+    border-top-right-radius:30px ;
+}
+.feature-image{
+    width: 530px;
+    position: absolute;
+    bottom: 0;
+   right: 10%;
+    
+}
+.feature-image.anim{
+    animation-delay: 1.2s;
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards ;
+}
+@keyframes moveup{
+    100%{
+    opacity: 1;
+    transform: translateY(0);
+}
+}
